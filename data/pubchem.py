@@ -16,7 +16,7 @@ def find_compound_cid(compound):
 
 
 def compound_information_cid(cid):
-    url_extension = 'compound/cid/' + cid + '/assaysummary/CSV'
+    url_extension = 'compound/cid/' + cid + '/assaysummary/XML'
     endpoint = base_url + url_extension
     try:
         r = requests.get(endpoint)

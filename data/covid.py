@@ -1,3 +1,3 @@
-from pubchem import find_compound_cid
+from pubchem import compound_information
 
-print(find_compound_cid('glucose'))
+print(compound_information('glucose'))
