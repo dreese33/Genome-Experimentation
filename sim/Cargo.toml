@@ -1,0 +1,7 @@
+[package]
+name = "genome_test"
+version = "0.1.0"
+authors = ["Dylan Reese <dylanjacobreese@gmail.com>"]
+edition = "2018"
+
+[dependencies]
