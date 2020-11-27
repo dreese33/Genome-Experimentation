@@ -9,14 +9,18 @@ def find_compound_cid(compound):
     try:
         r = requests.get(endpoint)
         cid = r.text.strip()
+        cid = int(cid)
         return cid
+    except ValueError:
+        print("HTTP failure response in cid")
+        return -1
     except Exception as exc:
         print('An exception occurred in find_compound_cid')
         return -1
 
 
 def compound_information_cid(cid):
-    url_extension = 'compound/cid/' + cid + '/assaysummary/XML'
+    url_extension = 'compound/cid/' + str(cid) + '/assaysummary/XML'
     endpoint = base_url + url_extension
     try:
         r = requests.get(endpoint)
