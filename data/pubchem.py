@@ -1,7 +1,9 @@
 # Uses pubchem api to get NCBI datasets
 import requests
+import xml.etree.ElementTree as ET
 
 base_url = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/'
+
 
 def find_compound_cid(compound):
     url_extension = 'compound/name/' + compound + '/cids/TXT'

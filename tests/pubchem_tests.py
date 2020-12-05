@@ -22,8 +22,12 @@ class PubchemTests(Test):
         print("Test compound information cid...")
         info = pubchem.compound_information_cid(self.glucose)
         print("Glucose info extracted successfully\n")
+        print(info)
 
     def run_all(self):
         self.test_find_compound_cid()
         self.test_compound_information_cid()
 
+
+# Run tests in this file
+test = PubchemTests("pubchem")
